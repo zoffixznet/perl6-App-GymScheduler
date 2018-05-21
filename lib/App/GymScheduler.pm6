@@ -21,7 +21,7 @@ method run {
         .grep(*.day-of-week == none 0, 6).pick($wdays)».&[does]:
             role WorkoutDay {
                 method day {
-                    (my $d := callsame) but role {
+                    callsame() but role {
                         method fmt(|) { colored callsame, 'inverse' }
                     }
                 }
