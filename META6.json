@@ -2,7 +2,7 @@
     "perl"         : "6.c",
     "name"         : "App::GymScheduler",
     "license"      : "Artistic-2.0",
-    "version"      : "1.001001",
+    "version"      : "1.001002",
     "description"  : "Randomized schedule maker for your workouts",
     "tags"         : [ "planning" ],
     "depends"      : [ "Config::JSON" ],

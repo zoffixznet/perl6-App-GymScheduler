@@ -15,6 +15,8 @@ This program creates a random schedule for your workouts. It lets you have N
 workout days each month, but it randomizes when the workout days occur,
 so you don't feel like you're in a rut.
 
+![](sample.png)
+
 The program ensures the workouts don't happen on the weekend and
 supports workout "modes" that it loops through one after another. These rules
 are currently hard-coded, but if there's interest to make these customizeable

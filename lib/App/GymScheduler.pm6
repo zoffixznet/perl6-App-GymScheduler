@@ -19,7 +19,7 @@ method run {
     srand %conf<seed>;
     for @days.categorize({.month ~ "|" ~ .year}).sort».value {
         .grep(*.day-of-week == none 0, 6).pick($wdays)».&[does]:
-            role WorkoutDay {
+            role {
                 method day {
                     callsame() but role {
                         method fmt(|) { colored callsame, 'inverse' }
@@ -30,7 +30,9 @@ method run {
         say "{.year}/{.month}\n  S   M   T   W   T   F   S" with .head;
         print "    " x .head.day-of-week;
         for .<> {
-            print .day.fmt: " %2d ";
+            my $s := .day.fmt: " %2d ";
+            $s := colored $s, 'green' when ~Date.today;
+            $s.print;
             say() if .day-of-week == 6;
         }
         say "\n";
