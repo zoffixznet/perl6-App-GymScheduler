@@ -4,6 +4,26 @@
 
 `App::GymScheduler` — Randomized schedule maker for your workouts
 
+# TABLE OF CONTENTS
+- [RUNNING](#running)
+- [DESCRIPTION](#description)
+- [EXECUTABLES](#executables)
+- [CONFIGURATION KEYS](#configuration-keys)
+    - [`seed`](#seed)
+    - [`workout-days-per-month`](#workout-days-per-month)
+    - [`modes`](#modes)
+    - [`modes-desc`](#modes-desc)
+    - [`show-months-before`](#show-months-before)
+    - [`show-months-after`](#show-months-after)
+- [LIMITATIONS](#limitations)
+- [REPOSITORY](#repository)
+- [BUGS](#bugs)
+- [AUTHOR](#author)
+- [LICENSE](#license)
+
+# RUNNING
+
+Takes no arguments.
 
 ```perl6
     $ gym.p6
