@@ -29,6 +29,52 @@ This distribution installs `gym.p6` program. On its first execution will create
 your scheduler, if necessary. Running the program prints a calendar with
 your work out days marked off.
 
+# CONFIGURATION KEYS
+
+The config file is in JSON format, an object with key/values:
+
+## `seed`
+
+The saved [`time`](https://docs.perl6.org/routine/time) from which days
+generation will start (after subtracting `show-months-before` months). This
+is used to seed [`srand`](https://docs.perl6.org/routine/srand) when picking
+workout days.
+
+**Defaults to** the [`time`](https://docs.perl6.org/routine/time) when
+config file was created.
+
+## `workout-days-per-month`
+
+Number of non-weekend days to pick per month. **Defaults to** `14`.
+
+## `modes`
+
+Takes a list of valid
+[`Terminal::ANSIColor`](https://github.com/tadzik/Terminal-ANSIColor) colours.
+When highlighting workout days, the colors will rotate. You can make the
+program to print a legend of what the colours mean by adding `modes-desc`
+key to config file. **Defaults to** `["yellow", "magenta"]`
+
+## `modes-desc`
+
+```js
+    "modes-desc": [
+        "cardio", "weights"
+    ]
+```
+
+By default is not specified. Must contain the same number of elements as
+`modes` list. When specified, prints a legend of what `modes` colours mean,
+by mapping the `modes` elements to `modes-desc` elements.
+
+## `show-months-before`
+
+Number of months before the current month to print. **Defaults to** `1`
+
+## `show-months-after`
+
+Number of months after the current month to print. **Defaults to** `1`
+
 # LIMITATIONS
 
 Requires
